@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>Hello Harkkaprojekti</title>
+    </head>
+
+    <body>
+        <li th:each="train : ${trains}">
+            <a th:href="@{https://maps.google.com/?q={lng},{lat}(lat=${train.coordinateN},lng=${train.coordinateE})}" th:text="${train}">Train information</a>
+        </li>
+    </body>
+</html>
